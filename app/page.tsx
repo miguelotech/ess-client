@@ -12,7 +12,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />
-      <div className="pl-56">
+      <div className="lg:pl-56">
         <Suspense fallback={<div className="p-6">Cargando...</div>}>
           <Header />
           <main className="p-4 lg:p-6">

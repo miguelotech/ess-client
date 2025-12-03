@@ -360,7 +360,7 @@ function AnalyticsContent() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />
-      <div className="pl-56">
+      <div className="lg:pl-56">
         <Header />
         <main className="p-6">
           <div className="mb-6">

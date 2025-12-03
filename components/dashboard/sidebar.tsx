@@ -14,7 +14,7 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-56 border-r border-sidebar-border bg-sidebar">
+    <aside className="fixed left-0 top-0 z-40 hidden h-screen w-56 border-r border-sidebar-border bg-sidebar lg:flex flex-col">
       <div className="flex h-16 items-center gap-2.5 px-5">
         <div className="flex h-8 w-8 items-center justify-center">
           <svg
