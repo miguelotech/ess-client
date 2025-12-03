@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import type React from "react"
 
 import useSWR from "swr"
@@ -351,7 +352,7 @@ function RegionPerformance() {
   )
 }
 
-export default function AnalyticsPage() {
+function AnalyticsContent() {
   const searchParams = useSearchParams()
   const period = searchParams.get("period") || "year"
   const { data: summary, isLoading: loadingSummary } = useSWR(["summary-analytics", period], () => fetchSummary(period))
@@ -425,5 +426,13 @@ export default function AnalyticsPage() {
         </main>
       </div>
     </div>
+  )
+}
+
+export default function AnalyticsPage() {
+  return (
+    <Suspense fallback={<div className="flex h-screen items-center justify-center">Cargando...</div>}>
+      <AnalyticsContent />
+    </Suspense>
   )
 }
