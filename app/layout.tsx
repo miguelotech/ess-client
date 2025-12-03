@@ -7,7 +7,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Sales Corp - Panel de Ventas",
+  title: "Agropecuaria Chimú S.R.L.",
   description: "Panel de análisis de ventas empresarial",
     generator: 'v0.app'
 }
